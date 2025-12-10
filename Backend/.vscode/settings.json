@@ -1,0 +1,18 @@
+{
+    "files.exclude": {
+        "**/.*": true
+    },
+    "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange",
+    "editor.defaultFormatter": "google.cloud-shell",
+    "editor.wordWrap": "on",
+    "editor.mouseWheelZoom": true,
+    "editor.formatOnPaste": true,
+    "editor.accessibilitySupport": "on",
+    "editor.allowVariableFontsInAccessibilityMode": true,
+    "editor.autoIndentOnPaste": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.codeActions.triggerOnFocusChange": true,
+    "editor.columnSelection": true,
+    "editor.definitionLinkOpensInPeek": true
+}

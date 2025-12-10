@@ -1,0 +1,16 @@
+{
+    "macos": {
+        "vibrancy": "under-window",
+        "visualEffectState": "followWindow",
+        "tintColor": "#99FFFFFF"
+    },
+    "windows": {
+        "backgroundMaterial": "acrylic",
+        "backgroundColor": "#99FFFFFF"
+    },
+    "common": {
+        "transparent": true,
+        "zoomFactor": 1.0,
+        "noiseOpacity": 0.04
+    }
+}

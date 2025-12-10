@@ -1,0 +1,16 @@
+[2025-11-10] - Backend status check: OK.
+[2025-11-10] - CHECKPOINT: Iniciando configuración de entorno de desarrollo local con Docker.
+[2025-11-10] - CHECKPOINT: Creación de flujos de trabajo para entornos Local (Docker) y Nube (Cloud SQL).
+  - Entorno Local:
+    - Comando DB: docker-compose up -d
+    - Comando App: npm start (usa .env.local)
+  - Entorno Nube:
+    - Comando DB Proxy: sudo cloud_sql_proxy -dir=/cloudsql dogma-black:us-central1:eco-digital-db-instance
+    - Comando App: npm run start:cloud (usa .env)
+  - Verificación: Endpoint /db-test modificado para mostrar el entorno activo.
+[2025-11-10] - CHECKPOINT: Verificación completa del entorno local.
+  - Se inició la base de datos con 'docker-compose up -d'.
+  - Se inició el servidor con 'npm start'.
+  - Se creó el esquema de la tabla 'users' con el endpoint '/setup-database'.
+  - Se completó con éxito el flujo de registro y login con '/register' y '/login'.
+  - El entorno de desarrollo local está confirmado como 100% funcional.
