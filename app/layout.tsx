@@ -3,10 +3,7 @@ import { Nunito } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ToolbarWrapper } from "@/components/ToolbarWrapper";
-import { setupStagewise } from "@/lib/toolbar-setup";
-
-// Initialize toolbar in development mode
-setupStagewise();
+import { ToolbarProvider } from "@/components/toolbar-provider";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -35,6 +32,7 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
+          <ToolbarProvider />
           {children}
           <ToolbarWrapper />
         </ThemeProvider>

@@ -1,8 +1,12 @@
+'use client';
+
 /**
  * Toolbar Setup Module
  * Initializes the 21st Extension Toolbar in development mode
+ * For Next.js with React
  */
 
+import { useEffect } from 'react';
 import { initToolbar } from '@21st-extension/toolbar';
 
 // Define toolbar configuration
@@ -12,21 +16,34 @@ const stagewiseConfig = {
 
 /**
  * Initialize the toolbar when your app starts
- * Framework-agnostic approach - call this when your app initializes
+ * React Hook approach for Next.js client components
+ */
+export function useToolbarSetup() {
+  useEffect(() => {
+    // Only initialize once and only in development mode
+    if (process.env.NODE_ENV === 'development') {
+      try {
+        initToolbar(stagewiseConfig);
+        if (typeof window !== 'undefined') {
+          console.log('✓ Stagewise toolbar initialized successfully');
+        }
+      } catch (error) {
+        console.warn('⚠ Failed to initialize Stagewise toolbar:', error);
+      }
+    }
+  }, []);
+}
+
+/**
+ * Alternative: Framework-agnostic function for server-side initialization
  */
 export function setupStagewise() {
-  // Only initialize once and only in development mode
   if (process.env.NODE_ENV === 'development') {
     try {
       initToolbar(stagewiseConfig);
-      console.log('Stagewise toolbar initialized successfully');
+      console.log('✓ Stagewise toolbar initialized successfully');
     } catch (error) {
-      console.warn('Failed to initialize Stagewise toolbar:', error);
+      console.warn('⚠ Failed to initialize Stagewise toolbar:', error);
     }
   }
-}
-
-// Auto-initialize if this module is imported
-if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
-  setupStagewise();
 }
