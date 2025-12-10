@@ -1,0 +1,9 @@
+{
+  "toolbar": {
+    "enabled": true,
+    "position": "bottom-right",
+    "plugins": [],
+    "devMode": true,
+    "logLevel": "info"
+  }
+}

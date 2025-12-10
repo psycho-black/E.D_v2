@@ -72,6 +72,9 @@ importers:
       '@21st-extension/react':
         specifier: ^0.5.14
         version: 0.5.14(@21st-extension/toolbar@0.5.14(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))
+      '@21st-extension/toolbar':
+        specifier: ^0.5.14
+        version: 0.5.14(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       '@21st-extension/toolbar-next':
         specifier: ^0.5.14
         version: 0.5.14(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(next@16.0.7(@babel/core@7.28.5)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
