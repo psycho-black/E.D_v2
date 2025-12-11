@@ -349,3 +349,5 @@ export function TaskSidebar({
     </Sidebar>
   );
 }
+
+// Helpers SidebarButton, SidebarSectionHover, SidebarSubGroup ya no son necesarios en esta versión revertida
